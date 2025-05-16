@@ -3,28 +3,39 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Contoh CSS Sederhana</title>
+    <title>CSS Parent-Child & Grouping Selector</title>
     <style>
-        /* Internal CSS: selector, property, value */
+        /* Parent sets font and color, child mewarisi */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #222;
             margin: 20px;
+            background-color: #fafafa;
         }
 
-        h1 {
-            color: #2c3e50;
-            text-align: center;
+        /* Targeting multiple elements dengan satu deklarasi */
+        h1,
+        h2,
+        h3 {
+            color: #005f73;
+            margin-bottom: 10px;
         }
 
-        p {
-            color: #34495e;
-            font-size: 16px;
-            line-height: 1.5;
+        /* Parent-child: div dengan class container mewariskan font */
+        .container {
+            padding: 15px;
+            border: 1px solid #ccc;
         }
 
-        .highlight {
-            background-color: yellow;
+        /* child p di dalam .container, override warna */
+        .container p {
+            color: #0a9396;
+            line-height: 1.4;
+        }
+
+        /* override pewarisan di elemen spesifik */
+        .container p.special {
+            color: #ee6c4d;
             font-weight: bold;
         }
     </style>
@@ -32,11 +43,15 @@
 
 <body>
 
-    <h1>Basic CSS Syntax & Inline CSS</h1>
+    <div class="container">
+        <h1>Parent-Child Inheritance</h1>
+        <p>Paragraf ini <strong>mewarisi</strong> font dari parent <code>body</code>.</p>
+        <p class="special">Paragraf ini mewarisi dan di-override warna serta font-weight-nya.</p>
+    </div>
 
-    <p>Ini paragraf dengan <span style="color: red;">inline CSS</span> (langsung di tag).</p>
-
-    <p class="highlight">Ini paragraf dengan class "highlight" menggunakan internal CSS.</p>
+    <h2>Targeting Multiple Elements</h2>
+    <h3>Heading H3 juga mendapatkan warna sama dengan H1 dan H2</h3>
+    <p>Contoh lain dari pewarisan dan selektor gabungan.</p>
 
 </body>
 
