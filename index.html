@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <title>Contoh CSS Sederhana</title>
+    <style>
+        /* Internal CSS: selector, property, value */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        p {
+            color: #34495e;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
+
+    <h1>Basic CSS Syntax & Inline CSS</h1>
+
+    <p>Ini paragraf dengan <span style="color: red;">inline CSS</span> (langsung di tag).</p>
+
+    <p class="highlight">Ini paragraf dengan class "highlight" menggunakan internal CSS.</p>
 
 </body>
 
